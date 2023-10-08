@@ -1,0 +1,159 @@
+//* Media query for smaller screens (e.g., max-width: 768px) */
+@media (max-width: 768px) {
+  /* Change to a vertical list layout */
+  .nav-menu {
+      text-align: left; /* Align the menu to the left */
+  }
+
+  .nav-menu li {
+      display: block; /* Display list items as blocks (vertical layout) */
+      margin-bottom: 10px; /* Add some spacing between items */
+  }
+}
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  /*background-color: transparent;*/
+  background-image: url(home-hero-1.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #fff;
+ 
+}
+
+/* Header styles */
+header {
+  background-color: #fff;
+  color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  padding: 5px 5px;
+  border-bottom-left-radius: 20px;
+  margin: 5px;
+}
+.header-title {
+  font-size: 36px;
+}
+
+.nav-menu {
+  text-align: right;
+}
+
+.nav-menu li {
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: blue;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #f00; /* Red on hover */
+}
+
+.w,
+.s,
+.b {
+  font-size: 70px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: aliceblue;
+  margin-left: 5px;
+}
+
+/* Section styles */
+.section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #transluscent;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* WhatsApp button styles */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust the position from the bottom as needed */
+  right: 20px; /* Adjust the position from the right as needed */
+  z-index: 999; /* Ensures the button appears above other content */
+}
+
+#whatsapp-button a {
+  display: block;
+  background-color: #25d366; /* WhatsApp green color */
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+#whatsapp-button img {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer styles */
+footer {
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  
+  margin left: 200px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #f00;
+}

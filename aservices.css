@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  /*background-color: transparent;*/
+  background-image: url(home-hero-1.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Header styles */
+header {
+  background-color: #fff;
+  color: blue;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  padding: -2px -2px;
+  border-bottom-left-radius: 20px;
+}
+
+.home {
+  color: #fff;
+}
+.ser {
+  font-size: 60px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* Section styles */
+.section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #transluscent;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.q {
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/* WhatsApp button styles */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust the position from the bottom as needed */
+  right: 20px; /* Adjust the position from the right as needed */
+  z-index: 999; /* Ensures the button appears above other content */
+}
+
+#whatsapp-button a {
+  display: block;
+  background-color: #25d366; /* WhatsApp green color */
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+#whatsapp-button img {
+  width: 100%;
+  height: auto;
+}

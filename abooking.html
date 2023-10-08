@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #3498db; /* Background color */
+        color: #fff; /* Foreground color */
+      background-image: url(home-hero-1.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+
+    header {
+  background-color: turquoise;
+  color: blue;
+  font-size: 26px;
+  font-family: sans-serif;
+  text-align: center;
+  padding: -10px -10px;
+  border-bottom-left-radius: 20px;
+    }
+
+    .home{
+      color: #ccc;
+    }
+
+    .q{
+      text-align: left;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 60px;
+    }
+
+    .book{
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-top: 50px;
+        background-image: url(home-hero-1.jpg);
+      }
+.form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"]
+      input[type="tel"]
+      textarea[id="message"] {
+        width: 40%;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        
+      }
+      select {
+        width: 20%;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      /* WhatsApp button styles */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Adjust the position from the bottom as needed */
+    right: 20px; /* Adjust the position from the right as needed */
+    z-index: 999; /* Ensures the button appears above other content */
+}
+
+#whatsapp-button a {
+    display: block;
+    background-color: #25d366; /* WhatsApp green color */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+#whatsapp-button img {
+    width: 100%;
+    height: auto;
+}
+
+  </style>
+  <body>
+    <header>
+      <h1 class="header">Afia Healthcare Booking</h1>
+    </header>
+    <a href="an.html"><p class="home">Home</p></a>
+    <section id="Welcome" class="section">
+      
+      <p><h1 class="q">Welcome to Afia Healthcare</h1>
+        To reach a health professional at a charger, please fill out the form below.
+        <p class="book">Booking Form</p>
+
+        <div class="container">
+          <form action="your_booking_processing_script.php" method="post">
+            <div class="form-group">
+              <label for="first_name">First name:</label>
+              <input type="text" id="first_name" name="first_name" required />
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last name:</label>
+              <input type="text" id="last_name" name="last_name" required />
+            </div>
+
+          <label for="othername">Other name(s):</label>
+          <input type="text" id="other_name" name="other_name" required>
+
+
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+<br>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+<br>
+<p></p>
+          <label for="date">Preferred Date for meeting:</label>
+          <input type="date" id="date" name="date" required>
+<br>
+<p></p>
+          <label for="message">Health issue:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+<br>
+<p></p>
+
+<label for="voice-recording">Voice Recording:</label>
+<button id="start-recording" type="button">Start Recording</button>
+<button id="stop-recording" type="button" disabled>Stop Recording</button>
+<audio id="audio-player" controls></audio>
+
+<input type="hidden" id="voice-data" name="voice_data" />
+  
+          <button type="submit">Submit</button>
+      </form>
+        </div>
+      </p>
+      <div id="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?https://whatsapp.com/dl/code=Ggks9Nc86q" target="_blank" rel="noopener noreferrer">
+            <img src="whatsapp-logo-png-6.png" alt="WhatsApp Icon">
+        </a>
+    </div>
+</section>
+<script>
+  const startRecordingButton = document.getElementById('start-recording');
+const stopRecordingButton = document.getElementById('stop-recording');
+const audioPlayer = document.getElementById('audio-player');
+const voiceDataInput = document.getElementById('voice-data');
+let mediaRecorder;
+let audioChunks = [];
+
+startRecordingButton.addEventListener('click', () => {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then((stream) => {
+            mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.ondataavailable = (e) => {
+                if (e.data.size > 0) {
+                    audioChunks.push(e.data);
+                }
+            };
+
+            mediaRecorder.onstop = () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                const audioUrl = URL.createObjectURL(audioBlob);
+
+                audioPlayer.src = audioUrl;
+                audioPlayer.controls = true;
+
+                const reader = new FileReader();
+                reader.readAsDataURL(audioBlob);
+                reader.onloadend = () => {
+                    voiceDataInput.value = reader.result;
+                };
+            };
+
+            mediaRecorder.start();
+            startRecordingButton.disabled = true;
+            stopRecordingButton.disabled = false;
+        })
+        .catch((error) => {
+            console.error('Error accessing microphone:', error);
+        });
+});
+
+stopRecordingButton.addEventListener('click', () => {
+    if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+        mediaRecorder.stop();
+        startRecordingButton.disabled = false;
+        stopRecordingButton.disabled = true;
+    }
+});
+
+
+</script>
+  </body>
+</html>

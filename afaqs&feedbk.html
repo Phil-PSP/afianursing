@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs, Testimonials & Feedback</title>
+    <style>
+      /* Reset some default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Set a background color for the body */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #3498db; /* Background color */
+        color: #fff; /* Foreground color */
+        background-image: url(home-hero-1.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+      }
+
+      /* Style the header */
+      .header {
+        background-color: turquoise;
+        color: blue;
+        font-size: 26px;
+        font-family: sans-serif;
+        text-align: center;
+        padding: -10px -10px;
+        border-bottom-left-radius: 20px;
+        margin: 5px;
+      }
+
+      /* Style the container div */
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: transparent;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      /* Style headings and paragraphs */
+      h1,
+      h2,
+      h3 {
+        color: black;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      /* Style the FAQ items */
+      .faq-item {
+        margin-bottom: 20px;
+      }
+
+      .faq-question {
+        cursor: pointer;
+        font-weight: bold;
+        background-color: transparent;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .faq-answer {
+        display: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Style testimonials */
+      .testimonial {
+        background-color: transparent;
+        padding: 20px;
+        border: 1px solid #555;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .stars {
+        color: #f39c12;
+        font-size: 20px;
+      }
+
+      .rating-text {
+        margin-left: 10px;
+        font-weight: bold;
+      }
+
+      .testimonial-author {
+        font-style: italic;
+        text-align: right;
+        margin-top: 10px;
+      }
+
+      /* Style the feedback form */
+      form {
+        margin-top: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      form label {
+        display: block;
+        color: blanchedalmond;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      button[type="submit"] {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      /* WhatsApp button styles */
+      #whatsapp-button {
+        position: fixed;
+        bottom: 20px; /* Adjust the position from the bottom as needed */
+        right: 20px; /* Adjust the position from the right as needed */
+        z-index: 999; /* Ensures the button appears above other content */
+      }
+
+      #whatsapp-button a {
+        display: block;
+        background-color: #25d366; /* WhatsApp green color */
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 24px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+      }
+
+      #whatsapp-button img {
+        width: 100%;
+        height: auto;
+      }
+      /* Style the footer */
+      footer {
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="header">Afia Healthcare Services</h1>
+    </header>
+    <a href="an.html"><p class="home">Home</p></a>
+    <div class="container">
+      <section id="faq">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+          <h3 class="faq-question">1. How do I book an appointment?</h3>
+          <div class="faq-answer">
+            <p>
+              Booking an appointment is easy! You can use our online booking
+              portal on our website or call our appointment line at +233 59 867
+              2060
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">2. What are your working hours?</h3>
+          <div class="faq-answer">
+            <p>We are open 24/7</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">3. Do you accept insurance?</h3>
+          <div class="faq-answer">
+            <p>
+              Yes, we accept a wide range of insurance plans. Please check with
+              our front desk or your insurance provider for details.
+            </p>
+          </div>
+        </div>
+        <!-- Add more FAQ items as needed -->
+      </section>
+
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+          <p>
+            "I received outstanding care at Afia Healthcare. The staff was
+            attentive, and the doctors were knowledgeable and compassionate. I
+            highly recommend them!"
+          </p>
+          <div class="rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="rating-text">5/5</span>
+          </div>
+          <p class="testimonial-author">- Sarah Johnson</p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Afia Healthcare exceeded my expectations. Their commitment to
+            patient well-being is evident in every aspect of their service. I'm
+            grateful for their care."
+          </p>
+          <div class="rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="rating-text">5/5</span>
+          </div>
+          <p class="testimonial-author">- John Smith</p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "The professionalism and expertise of the healthcare team at Afia
+            Healthcare are unmatched. I trust them with my health and recommend
+            them to all."
+          </p>
+          <div class="rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="rating-text">5/5</span>
+          </div>
+          <p class="testimonial-author">- Maria Rodriguez</p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "I've been a patient at Afia Healthcare for years. Their consistent
+            quality of care and dedication to patient comfort are truly
+            commendable."
+          </p>
+          <div class="rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="rating-text">5/5</span>
+          </div>
+          <p class="testimonial-author">- David Miller</p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Afia Healthcare sets the standard for excellence in healthcare. The
+            staff's genuine concern for patients makes a significant difference
+            in the healing process."
+          </p>
+          <div class="rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="rating-text">5/5</span>
+          </div>
+          <p class="testimonial-author">- Emily Wilson</p>
+        </div>
+      </section>
+
+      <section id="feedback">
+        <h2>Feedback</h2>
+        <p>
+          We value your feedback and strive to improve our services. Please
+          share your thoughts and rate us:
+        </p>
+        <form action="submit_feedback.php" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+              <option value="5">5 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="3">3 Stars</option>
+              <option value="2">2 Stars</option>
+              <option value="1">1 Star</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Feedback:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit">Submit Feedback</button>
+        </form>
+      </section>
+    </div>
+    <div id="whatsapp-button">
+      <a
+        href="https://api.whatsapp.com/send?https://whatsapp.com/dl/code=Ggks9Nc86q"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="whatsapp-logo-png-6.png" alt="WhatsApp Icon" />
+      </a>
+    </div>
+    <footer>
+      <p>&copy; 2023 Afia Healthcare</p>
+    </footer>
+    <script>
+      // JavaScript code to toggle FAQ answers
+      const faqQuestions = document.querySelectorAll(".faq-question");
+
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const answer = question.nextElementSibling;
+          answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+        });
+      });
+    </script>
+  </body>
+</html>
